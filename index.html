@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>G JIFFY Login</title>
+
+<style>
+body{
+font-family:Arial;
+background:#f4f4f4;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.login-box{
+background:#fff;
+padding:25px;
+width:320px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+input{
+width:100%;
+padding:12px;
+margin:8px 0;
+box-sizing:border-box;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#007bff;
+color:white;
+border:none;
+cursor:pointer;
+font-size:16px;
+}
+
+h2{
+text-align:center;
+}
+</style>
+
+</head>
+<body>
+
+<div class="login-box">
+
+<h2>G JIFFY LOGIN</h2>
+
+<input type="text" id="username" placeholder="Username">
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">LOGIN</button>
+
+<p id="msg"></p>
+
+</div>
+
+<script>
+
+function login(){
+
+let user=document.getElementById("username").value;
+let pass=document.getElementById("password").value;
+
+if(user==="admin" && pass==="123456"){
+window.location.href="dashboard.html";
+}
+else{
+document.getElementById("msg").innerHTML="Invalid Login";
+}
+
+}
+
+</script>
+
+</body>
+</html>
